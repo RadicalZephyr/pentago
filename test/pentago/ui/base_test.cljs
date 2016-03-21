@@ -4,6 +4,12 @@
             [pentago.ui.base :as sut]
             [reagent.core]))
 
+(defcard-rg square
+  [:div
+   [:div.square]
+   [:div.square.black]
+   [:div.square.white]])
+
 (defcard-rg grid
   [:div {:style {:border "3px cornflowerblue solid"}}
    [:div

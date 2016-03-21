@@ -23,6 +23,16 @@
 (defstyles screen
   [:* {:box-sizing "border-box"}]
 
+  [:.square
+   [:&.black {:background-color "black"}]
+   [:&.white {:background-color "white"}]
+
+   {:background-color "grey"
+    :border "black 2px solid"
+    :height "40px"
+    :width "40px"
+    :margin "5px"}]
+
   (let [margin-width 3/4
         percent-for (partial percent-for-x-nths margin-width)]
 
