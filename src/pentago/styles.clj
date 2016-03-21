@@ -1,6 +1,7 @@
 (ns pentago.styles
   (:require [garden.def :refer [defstyles]]
             [garden.stylesheet :refer [rule]]
+            [garden.selectors :as sel]
             [garden.units :as u]))
 
 (defn- fudge-factor [gutter-width x n]
@@ -24,8 +25,10 @@
   [:* {:box-sizing "border-box"}]
 
   [:.square
-   [:&.black {:background-color "black"}]
-   [:&.white {:background-color "white"}]
+   [(sel/& (sel/attr= :data-color "black"))
+    {:background-color "black"}]
+   [(sel/& (sel/attr= :data-color "white"))
+    {:background-color "white"}]
 
    {:background-color "grey"
     :border "black 2px solid"
