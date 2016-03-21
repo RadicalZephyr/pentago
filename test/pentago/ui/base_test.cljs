@@ -10,6 +10,12 @@
    [sut/square :black]
    [sut/square :white]])
 
+(defcard-rg quadrant
+  [sut/quadrant])
+
+(defcard-rg board
+  [sut/board])
+
 (defcard-rg grid
   [:div {:style {:border "3px cornflowerblue solid"}}
    [:div

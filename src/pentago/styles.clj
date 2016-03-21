@@ -37,6 +37,24 @@
     :width "40px"
     :margin "5px"}]
 
+  [:.row {:display "flex"
+          :flex-direction "row"}]
+
+  [:.quadrant
+   {:display "flex"
+    :flex-direction "column"}]
+
+  [:.board
+   ["> .row:first-child"
+    {:border-bottom "black 10px solid"}]
+
+   ["> .row > .quadrant:first-child"
+    {:border-right "black 10px solid"}]
+
+   {:display "flex"
+    :width "auto"
+    :flex-direction "column"}]
+
   (let [margin-width 3/4
         percent-for (partial percent-for-x-nths margin-width)]
 
