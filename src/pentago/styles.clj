@@ -25,9 +25,10 @@
   [:* {:box-sizing "border-box"}]
 
   [:.square
-   [(sel/& (sel/attr= :data-color "black"))
+   ["&[data-color='black']"
     {:background-color "black"}]
-   [(sel/& (sel/attr= :data-color "white"))
+
+   ["&[data-color='white']"
     {:background-color "white"}]
 
    {:background-color "grey"
