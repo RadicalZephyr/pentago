@@ -24,10 +24,14 @@
    [:* {:box-sizing "border-box"}]
 
    [:.square
+    [:&:hover {:cursor "pointer"}]
+
     ["&[data-color='black']"
+     [:&:hover {:cursor "initial"}]
      {:background-color "black"}]
 
     ["&[data-color='white']"
+     [:&:hover {:cursor "initial"}]
      {:background-color "white"}]
 
     {:background-color "grey"

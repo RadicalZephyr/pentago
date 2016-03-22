@@ -1,14 +1,13 @@
 (ns pentago.ui.base)
 
 (defn square [color]
-  [:div.square {:data-color (name color)}
-   [:a {:href "#"}]])
+  [:div.square (if color {:data-color (name color)} {})])
 
 (defn quadrant []
   [:div.quadrant
-   [:div.row (repeat 3 [:div.square])]
-   [:div.row (repeat 3 [:div.square])]
-   [:div.row (repeat 3 [:div.square])]])
+   [:div.row (repeat 3 [square nil])]
+   [:div.row (repeat 3 [square nil])]
+   [:div.row (repeat 3 [square nil])]])
 
 (defn board []
   [:div.board
